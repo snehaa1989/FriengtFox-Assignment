@@ -1,6 +1,7 @@
 services:
   - type: web
     name: dispatch-load-balancer
+    runtime: docker
     dockerContext: .
     dockerfilePath: Dockerfile
     envVars:
