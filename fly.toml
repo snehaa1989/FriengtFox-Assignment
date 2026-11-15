@@ -1,9 +1,6 @@
 app = "friengtfox-assignment"
 primary_region = "iad"
 
-[build]
-  dockerfile = "Dockerfile"
-
 [env]
   DDL_AUTO = "update"
   SPRING_DATASOURCE_URL = "jdbc:postgresql://fly-user:ByB1sR4ZLKhplSrMQanO5Gvy1hb3DzW8nvlcM-jScpA@pgbouncer.zp2wjremmp9odn4q.flympg.net/fly-db"
