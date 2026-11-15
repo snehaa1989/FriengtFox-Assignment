@@ -1,4 +1,4 @@
-app = "dispatch-load-balancer"
+app = "friengtfox-assignment"
 primary_region = "iad"
 
 [build]
