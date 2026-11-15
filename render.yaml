@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: dispatch-load-balancer
+    env: java
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/dispatch-load-balancer-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: JAVA_VERSION
+        value: 21
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: dispatch-db
+          property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: dispatch-db
+          property: user
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: dispatch-db
+          property: password
+
+databases:
+  - name: dispatch-db
+    databaseName: dispatch_db
+    user: dispatch_user
