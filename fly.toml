@@ -6,6 +6,9 @@ primary_region = "iad"
 
 [env]
   DDL_AUTO = "update"
+  SPRING_DATASOURCE_URL = "jdbc:postgresql://fly-user:ByB1sR4ZLKhplSrMQanO5Gvy1hb3DzW8nvlcM-jScpA@pgbouncer.zp2wjremmp9odn4q.flympg.net/fly-db"
+  SPRING_DATASOURCE_USERNAME = "fly-user"
+  SPRING_DATASOURCE_PASSWORD = "ByB1sR4ZLKhplSrMQanO5Gvy1hb3DzW8nvlcM-jScpA"
 
 [[services]]
   http_checks = []
